@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">music1</string>
+    <string name="suiji">随机播放</string>
+    <string name="shunxu">顺序播放</string>
+    <string name="last">上一曲</string>
+    <string name="gostop">继续/暂停</string>
+    <string name="next">下一曲</string>
+    <string name="start">开始</string>
+    <string name="refresh">刷新列表</string>
+    <string name="stop">暂停</string>
 </resources>
