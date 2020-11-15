@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.musicList);
 
+        listView.getAdapter();
 
         try {
             setListViewAdapter();//添加文件名字
@@ -57,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         go.setOnClickListener(view -> {                      //开始播放  暂停播放   继续播放
-            this.openAssetMusics();
             try {
 
                 /*

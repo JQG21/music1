@@ -37,25 +37,24 @@ public class MusicService extends Service {
     }
 
 
+
     public MusicService() {
-
         super();
-
         player = new MediaPlayer();//实例化一个多媒体对象
-
-        musicList = new ArrayList<>();//实例化一个List链表数组
-
+        musicList = new ArrayList<String>();//实例化一个List链表数组
         try {
             File MUSIC_PATH = new File(PATH, "Music");//获取根目录的二级目录Music
+            File[] files = MUSIC_PATH.listFiles();
+            System.out.println("文件长度为:"+files.length);
             if (Objects.requireNonNull(MUSIC_PATH.listFiles(new MusicFilter())).length > 0) {
                 for (File file : Objects.requireNonNull(MUSIC_PATH.listFiles(new MusicFilter()))) {
                     musicList.add(file.getAbsolutePath());
+                    System.out.println("当前运行位置file.getAbsolutePath()："+file.getAbsolutePath());
                 }
             }
         } catch (Exception e) {
             Log.i("TAG", "读取文件异常");
         }
-
     }
 
     public void setPlayName(String dataSource) {
